@@ -1,5 +1,6 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using System.Linq;
+using System;
 
 
 namespace arrayTest
@@ -11,11 +12,11 @@ namespace arrayTest
             int[] Liste = new int[10];
 
             Liste[0] = 1;
-            Liste[1] = 2;
+            Liste[1] = 6;
             Liste[2] = 3;
             Liste[3] = 4;
             Liste[4] = 5;
-            Liste[5] = 6;
+            Liste[5] = 2;
             Liste[6] = 7;
             Liste[7] = 8;
             Liste[8] = 9;
@@ -41,6 +42,14 @@ namespace arrayTest
             Console.WriteLine("Print Max of array: " + ArrayMax(Liste).ToString());
             Console.WriteLine("Print Min of array: " + ArrayMin(Liste).ToString());
             Console.WriteLine("Print Sum of array: " + ArraySum(Liste).ToString());
+            Console.WriteLine("Print Length of array: " + ArrayLength(Liste).ToString());
+            Console.Write('\n');
+
+
+            Console.WriteLine("Print sorted array");
+            ArraySort(Liste);
+            ArrayPrint(Liste);
+            Console.Write("\n");
 
             Console.Write("\n");
             Console.WriteLine("Press a key to exit");
@@ -51,7 +60,7 @@ namespace arrayTest
             Console.WriteLine(ArrayFormat(Liste, ", "));
         }
 
-            static void ArraySort(int[] Liste)
+        static void ArraySort(int[] Liste)
         {
             Array.Sort(Liste);
         }
